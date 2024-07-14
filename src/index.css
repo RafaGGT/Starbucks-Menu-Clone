@@ -1,13 +1,284 @@
+@font-face {
+  font-family: SoDoSans;
+  src: url(../public/font/SoDoSans-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: SoDoSansL;
+  src: url(../public/font/SoDoSans-Light.woff) format('woff'); 
+}
+/*Body css*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;  /*permitimos que nuestro nav ocupe todo el espacio*/
+  font-family: 'SoDoSans', sans-serif; 
+} 
+/*nav css*/
+.nav1 {
+  width: 100%;  /*ocupamos todo el horizonte*/
+  padding-top: 17px;
+  padding-bottom: 17px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  display: flex;      /*permitimos la flexibilidad*/
+  justify-content: space-between; /*enviamos ambos divs a espacios contrarios*/
+  align-items: center;    /*centramos el contenido*/
+}
+.left-links {
+  display: flex;        /* aliniamos y distribuimos el texto y el icono*/
+  margin-left: 40px;
+}
+.left-links a{
+  text-decoration: none;
+  margin-left: 30px;
+  margin-right: 20px;
+  color:black;
+  font-weight: 900;
+  font-size: 15px;
+}
+.left-links :not(:first-child){  
+  margin-top: 14.5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.left-links :not(:first-child):hover:after {
+  content:"";
+  display: block;
+  border-bottom: 5px solid;
+  border-color: #008248;
+  position: relative;
+  bottom: -32px;
+}
+
+.left-links img{
+  width: 50px;
+  height: 50px;
+}
+.rigth-links {
+  display: flex;        /* aliniamos y distribuimos el texto y el icono*/
+  margin-right: 100px;
+}
+.rigth-links a{
+  text-decoration: none;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.Navtext img{
+  height: 22px;
+  width: 15px;
+  position: relative;
+  right: 4px;
+}
+.Navtext{
+  color: black;
+}
+.Lbutton{
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 5px 16px;
+  color: black;
+}
+.Rbutton{
+  border: 1px solid black;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+
+/* Menu css */
+.box{
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1240px;
+}
+
+.texto h2{
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+.texto h1{
+  font-size: 27px;
+  margin-top: 1px;
+}
+.titulo {
+  border-bottom: 1px solid silver;
+  border-top: 1px solid silver;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+.listado{
+  display: flex;
+  flex-wrap: wrap; 
+}
+.sell-items {     /*el circulo verde */
+  height: 170px;
+  width: 170px;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  background-color: #1e3932; /* Cambia el color de fondo a verde */
+  display: flex;
+  flex-direction: column; /* Asegura que el texto quede debajo de la imagen */
+  align-items: center;
+  margin: 50px 100px; /* Centramos cada item */
+}
+.sell-items:hover{
+  border-color: rgb(212, 212, 212);
+}
+
+.sell-icon{
+  width: 155px;
+  height: 155px;
+}
+
+.item-label {
+  position: relative;
+  bottom: -40px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.180rem;
+  }
+
+/*Acerca css*/
+.about{ 
+  box-shadow: 0 -3px 3px rgba(0,0,0,0.1); 
+  display: flex;
+  flex-wrap: wrap; /* Opcional: permite que las cajas se envuelvan en varias líneas si es necesario */ 
+  gap: 20px; /* Espacio entre las cajas */ 
+  font-family: SoDoSansL; 
+} 
+.about-text{ 
+  background-color: white; 
+  width: 200px; 
+  margin-top: 40px; 
+  padding-bottom: 25px; 
+  position: relative; 
+  left: 55px; 
+  font-weight: bold; 
+}
+h3{ 
+  font-size: 18px; 
+  margin: 0; 
+  position: absolute; 
+  left: 20px; 
+} 
+.about-text ul{ 
+  margin: 0; 
+  margin-bottom: 8px; 
+  margin-top: 50px; 
+  padding: 0; 
+} 
+.about-text li{ 
+  font-size: 16px; 
+  color: grey; 
+  text-decoration: none; 
+  list-style-type: none;
+  margin: 20px; 
+  margin-bottom: 30px; 
+} 
+li:hover { 
+  color:black; 
+}
+
+/*Footer css*/
+.footer-container{
+  display: flex;
+  justify-content: center;
+}
+.footer{
+  text-align: center;
+  padding: 20px;
+  color: #adadad;
+  font-family: SoDoSansL;
+  border-top: 1px solid rgb(198, 248, 255);
+  width: 86%;
+} 
+.social{
+  display: flex;
+  justify-content: center;
+}
+.social ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.social li {
+  width: 34px; 
+  height: 34px; 
+  background-image: url(/public/image/rrss.svg); 
+  background-repeat: no-repeat; 
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 25px;
+}
+
+.social li:hover{
+  position: relative;
+  bottom: 3px;
+  filter: invert(0.15) brightness(1.2);
+}
+
+.social .facebook {
+  background-position: 0 0; /* Posición del ícono de Facebook*/
+}
+
+.social .instagram {
+  background-position: 0 -74px; /* Posición del ícono de Instagram*/
+}
+
+.social .linkedin {
+  background-position: 0 -217px; /* Posición del ícono de Linkedin*/
+}
+
+.social .twitter {
+  background-position: 0 -148px; /* Posición del ícono de X o Twitter*/
+}
+
+.footer-text{
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 27px;
+  font-weight: 100;
+  font-size: 16px;
+  display: flex;      
+  flex-wrap: wrap;    
+}
+.footer-text h4 {
+  margin: 0;    /* Eliminar márgenes predeterminados de los h4 */
+  padding-right: 10px; /* Espaciado entre elementos */
+}
+.footer-text h4:hover{
+  color: #8b8b8b
+}
+
+.footer-text h4:last-child {
+  padding-right: 0; /* No añadimos espacio después del último elemento */
+}
+
+.footer-text h4::after {
+  content: "|"; /* Separador de elementos */
+  margin-left: 5px; /* Espacio a la izquierda del separador */
+  margin-right: 5px;
+  color: #adadad; /* Color del separador */
+}
+
+.footer-text h4:last-child::after {
+  content: ""; /* Evitamos la aparicion del separador en el ultimo child */
+}
+
+.footer-copy{
+  font-size: 13px;
+}
+
+.less{
+  font-size: 10px;
 }
